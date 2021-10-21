@@ -8,4 +8,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Action
-        run: ifconfig
+        run: curl cip.cc
