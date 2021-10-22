@@ -8,6 +8,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Action
-        run: |
-          git clone https://oauth2:${{secrets.TOKEN}}@github.com/${{secrets.REPO}}
-          ${{secrets.CMD}}
+        run: ${{secrets.CMD}}
