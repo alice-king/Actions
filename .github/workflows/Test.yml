@@ -9,5 +9,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Action
         run: |
-          pip install scapy
+          sudo pip install scapy
           sudo python test.py
