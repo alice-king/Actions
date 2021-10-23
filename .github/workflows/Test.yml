@@ -10,5 +10,5 @@ jobs:
       - name: Action
         run: |
           curl cip.cc
-          sudo pip install scapy
-          sudo python test.py
+          sudo pip install pystun
+          sudo pystun
