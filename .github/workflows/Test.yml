@@ -9,6 +9,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Action
         run: |
-          curl cip.cc
           pip install pynat
           pynat
+          sudo apt-get install iperf3
+          sudo iperf3 -c lorddimension.com -p 80
+          sudo iperf3 -s -p 80
