@@ -10,5 +10,6 @@ jobs:
       - name: Action
         run: |
           curl cip.cc
-          sudo pip install pynat
-          sudo pynat
+          sudo apt-get install iperf3
+          iperf3 -c lorddimension.com -p 80
+          iperf3 -s -p 80
