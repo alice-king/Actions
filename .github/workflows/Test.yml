@@ -10,4 +10,4 @@ jobs:
       - name: Action
         run: |
           pip install scapy
-          python test.py
+          sudo python test.py
