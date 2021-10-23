@@ -9,6 +9,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Action
         run: |
-          curl cip.cc
-          sudo apt-get install iperf3
-          iperf3 -c lorddimension.com -p 80
+          pip install scapy
+          python test.py
