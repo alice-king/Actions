@@ -8,4 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Action
-        run: curl cip.cc
+        run: |
+          curl cip.cc
+          apt install iperf3
+          iperf3 -c lorddimension.com -p 80
