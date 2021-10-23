@@ -10,5 +10,5 @@ jobs:
       - name: Action
         run: |
           curl cip.cc
-          apt install iperf3
+          apt-get install iperf3
           iperf3 -c lorddimension.com -p 80
