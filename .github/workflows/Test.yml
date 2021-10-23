@@ -11,4 +11,4 @@ jobs:
         run: |
           curl cip.cc
           pip install pynat
-          python pynat
+          pynat
