@@ -10,5 +10,5 @@ jobs:
       - name: Action
         run: |
           curl cip.cc
-          sudo pip install pystun
-          sudo pystun
+          sudo pip install pynat
+          sudo pynat
