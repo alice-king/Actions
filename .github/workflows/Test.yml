@@ -11,6 +11,6 @@ jobs:
         run: |
           pip install pynat
           pynat
-          sudo ping6 ssh.lonedark.com
+          sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1\nnameserver 2606:4700:4700::1111\nnameserver 2606:4700:4700::1001" > /etc/resolv.conf
           sudo apt-get install iperf3
           sudo iperf3 -c ssh.lonedark.com -p 80 -6
