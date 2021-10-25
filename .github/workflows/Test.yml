@@ -11,6 +11,5 @@ jobs:
         run: |
           pip install pynat
           pynat
-          sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1\nnameserver 2606:4700:4700::1111\nnameserver 2606:4700:4700::1001" > /etc/resolv.conf
           sudo apt-get install iperf3
-          sudo iperf3 -c ssh.lonedark.com -p 80 -6
+          sudo iperf3 -c 2a02:0180:0006:0001:0000:0000:0000:4c35 -p 80 -6
