@@ -11,5 +11,4 @@ jobs:
         run: |
           pip install pynat
           pynat
-          sudo apt-get install iperf3
-          sudo iperf3 -c 2a02:0180:0006:0001:0000:0000:0000:4c35 -p 80 -6
+          ping6 2001:4860:4860::6464
