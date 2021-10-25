@@ -11,5 +11,6 @@ jobs:
         run: |
           pip install pynat
           pynat
+          ifconfig
           sudo apt-get install iperf3
           sudo iperf3 -c lonedark.com -p 80
