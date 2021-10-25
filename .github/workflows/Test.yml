@@ -11,6 +11,6 @@ jobs:
         run: |
           pip install pynat
           pynat
-          ifconfig
+          sudo ping6 ssh.lonedark.com
           sudo apt-get install iperf3
           sudo iperf3 -c ssh.lonedark.com -p 80 -6
