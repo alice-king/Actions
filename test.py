@@ -1,3 +1,4 @@
+import time
 import asyncio
 import websockets
 
@@ -7,5 +8,6 @@ async def hello():
             await websocket.send("Hello world!")
             recv=await websocket.recv()
             print(recv,i)
+            time.sleep(0.01)
 
 asyncio.get_event_loop().run_until_complete(hello())
