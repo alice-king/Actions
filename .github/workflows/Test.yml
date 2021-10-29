@@ -11,8 +11,6 @@ jobs:
         run: |
           pip install pynat
           pynat
-          df -h
-          pwd
-          ls /mnt
+          cat /mnt/DATALOSS_WARNING_README.txt
           # pip install websockets
           # python test.py
