@@ -12,7 +12,7 @@ jobs:
           pip install pynat
           pynat
           df -h
-          ls
-          ls /
+          pwd
+          ls /mnt
           # pip install websockets
           # python test.py
