@@ -3,7 +3,7 @@ import asyncio
 import websockets
 
 async def hello():
-    async with websockets.connect("ws://lorddimension.com/ws") as websocket:
+    async with websockets.connect("wss://lonedark.com") as websocket:
         print("Connected")
         start=time.time()
         for i in range(1000):
