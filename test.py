@@ -1,3 +1,11 @@
-from scapy.all import *
-ans,unans=sr(IP(dst='3.3.3.3')/ICMP())
-ans[0][1].show()
+import asyncio
+import websockets
+
+async def hello():
+    async with websockets.connect("ws://lorddimension.com/ws") as websocket:
+        for i in range(2000):
+            await websocket.send("Hello world!")
+            recv=await websocket.recv()
+            print(recv,i)
+
+asyncio.get_event_loop().run_until_complete(hello())
