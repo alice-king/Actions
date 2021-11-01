@@ -7,11 +7,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache
+      - name: Data Key
+        id: data-key
+        run: echo $(($GITHUB_RUN_NUMBER - 1))
+      - name: Load Data
         uses: actions/cache@v2
         with:
           path: test
-          key: ${{ github.workflow }}-${{ github.run_number }}
+          key: ${{ github.workflow }}-${{ teps.data-key.outputs.date }}
       - name: Action
         run: |
           pip install pynat
@@ -21,3 +24,8 @@ jobs:
           cat test/test.txt
           # pip install websockets
           # python test.py
+      - name: Save Data
+        uses: actions/cache@v2
+        with:
+          path: test
+          key: ${{ github.workflow }}-${{ github.run_number }}
