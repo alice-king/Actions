@@ -7,10 +7,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          paths: .
+          key: test
       - name: Action
         run: |
           pip install pynat
           pynat
-          cat /mnt/DATALOSS_WARNING_README.txt
+          ls
+          echo "Hello World" >> test.txt
           # pip install websockets
           # python test.py
