@@ -14,7 +14,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: test
-          key: ${{ github.workflow }}-${{ teps.data-key.outputs.date }}
+          key: ${{ github.workflow }}-${{ steps.data-key.outputs.date }}
       - name: Action
         run: |
           pip install pynat
