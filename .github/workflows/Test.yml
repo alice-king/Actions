@@ -11,7 +11,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: test
-          key: ${{ env.GITHUB_WORKFLOW }}-${{ env.GITHUB_RUN_NUMBER }}
+          key: ${{ github.workflow }}-${{ github.run_number }}
       - name: Action
         run: |
           pip install pynat
