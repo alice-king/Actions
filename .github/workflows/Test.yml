@@ -10,13 +10,13 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          paths: .
+          path: test
           key: test
       - name: Action
         run: |
           pip install pynat
           pynat
-          ls
-          echo "Hello World" >> test.txt
+          echo "Hello World" >> test/test.txt
+          cat test/test.txt
           # pip install websockets
           # python test.py
