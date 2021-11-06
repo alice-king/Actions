@@ -24,7 +24,7 @@ jobs:
       - name: Action
         run: |
           echo ${{github.event.inputs.arg}}
-          pip install pynat
+          pip install pynat > /dev/null
           pynat
           # pip install websockets
           # python test.py

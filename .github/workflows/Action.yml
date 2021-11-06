@@ -1,6 +1,12 @@
 name: Action
 on:
   workflow_dispatch:
+    inputs:
+      arg:
+        description: 'Command argument'
+        required: false
+        default: ''
+
 jobs:
   Action:
     runs-on: ubuntu-latest
