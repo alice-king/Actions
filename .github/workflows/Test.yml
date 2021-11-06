@@ -28,7 +28,6 @@ jobs:
           pynat
           # pip install websockets
           # python test.py
-          sleep 60
       #   run: |
       #     mkdir -p test
       #     echo "Hello World" >> test/test.txt
