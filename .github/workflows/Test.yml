@@ -2,7 +2,7 @@ name: Test
 on:
   workflow_dispatch:
 jobs:
-  Test:
+  TestA:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,3 +29,12 @@ jobs:
         with:
           path: test
           key: ${{ github.workflow }}-${{ github.run_number }}
+  TestB:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Action
+        run: |
+          pip install pynat
+          pynat
