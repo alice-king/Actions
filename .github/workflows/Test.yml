@@ -1,6 +1,12 @@
 name: Test
 on:
   workflow_dispatch:
+    inputs:
+      arg:
+        description: 'Command argument'
+        required: false
+        default: ''
+
 jobs:
   Test:
     runs-on: ubuntu-latest
@@ -17,6 +23,7 @@ jobs:
       #     key: ${{ github.workflow }}-${{ steps.data-key.outputs.key }}
       - name: Action
         run: |
+          echo ${{github.event.inputs.arg}}
           pip install pynat
           pynat
           # pip install websockets
