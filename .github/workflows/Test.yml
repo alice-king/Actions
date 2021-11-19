@@ -26,8 +26,8 @@ jobs:
           echo ${{github.event.inputs.arg}}
           pip install pynat > /dev/null
           pynat
-          # pip install websockets
-          # python test.py
+          pip install websockets
+          python test.py
       #   run: |
       #     mkdir -p test
       #     echo "Hello World" >> test/test.txt
