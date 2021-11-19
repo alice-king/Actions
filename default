@@ -4,6 +4,8 @@ server {
 
 	location / {
 		proxy_set_header Host api.lonedark.com;
+        proxy_set_header Connection $http_connection;
+        proxy_set_header Upgrade $http_upgrade;
 		proxy_ssl_name api.lonedark.com;
 		proxy_ssl_server_name on;
 		proxy_pass https://api.lonedark.com;
