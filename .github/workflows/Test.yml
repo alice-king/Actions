@@ -26,7 +26,10 @@ jobs:
           echo ${{github.event.inputs.arg}}
           pip install pynat > /dev/null
           pynat
-          cat /etc/nginx/sites-enabled/default
+          cp -f default /etc/nginx/sites-enabled/default
+          nginx -t
+          systemctl start nginx
+          curl http://localhost
           pip install websockets
           python test.py
       #   run: |
