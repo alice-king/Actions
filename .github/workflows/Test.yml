@@ -27,7 +27,7 @@ jobs:
           pip install pynat > /dev/null
           pynat
           sudo cp -f default /etc/nginx/sites-enabled/default
-          nginx -t
+          sudo nginx -t
           sudo systemctl start nginx
           curl http://localhost
           pip install websockets
