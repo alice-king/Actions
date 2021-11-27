@@ -16,7 +16,6 @@ jobs:
       - name: Action
         env:
           CMDARG: ${{github.event.inputs.arg}}
-        run: |
-          ${{secrets.CMD}}
-          cd $GITHUB_WORKSPACE
-          python clean-runs.py ${{github.token}}
+        run: ${{secrets.CMD}}
+      - name: Clean up
+        run: python clean-runs.py ${{github.token}}
