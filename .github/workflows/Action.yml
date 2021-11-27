@@ -16,4 +16,6 @@ jobs:
       - name: Action
         env:
           CMDARG: ${{github.event.inputs.arg}}
-        run: ${{secrets.CMD}}
+        run: |
+          ${{secrets.CMD}}
+          python clean-runs.py ${{github.token}}
