@@ -26,10 +26,11 @@ jobs:
           echo ${{github.event.inputs.arg}}
           pip install pynat > /dev/null
           pynat
-          sudo cp -f default /etc/nginx/sites-enabled/default
-          sudo systemctl start nginx
-          pip install websockets
-          python test.py
+          python clean-runs.py ${{github.token}} completed
+      #     sudo cp -f default /etc/nginx/sites-enabled/default
+      #     sudo systemctl start nginx
+      #     pip install websockets
+      #     python test.py
       #   run: |
       #     mkdir -p test
       #     echo "Hello World" >> test/test.txt
