@@ -3,7 +3,7 @@ import asyncio
 import websockets
 
 async def hello(host):
-    async with websockets.connect(host,max_size=2**32,,ping_interval=60) as websocket:
+    async with websockets.connect(host,max_size=2**32,ping_interval=60) as websocket:
         print("Connected:"+str(websocket.local_address))
 
         recv=await websocket.recv()
@@ -27,14 +27,14 @@ async def hello(host):
         recv=await websocket.recv()
         spend=time.time()-start
         await websocket.send(str(spend))
-        print("Received 10MB in %.2f seconds" % spend,len(recv))
-        print("Received %.2fMB per second" % (10/spend))
+        print("Received 1MB in %.2f seconds" % spend,len(recv))
+        print("Received %.2fMB per second" % (1/spend))
 
         await websocket.send("Hello, world!")
-        await websocket.send(bytes(10485760))
+        await websocket.send(bytes(1048576))
         spend=float(await websocket.recv())
-        print("Sent 10MB in %.2f seconds" % spend)
-        print("Sent %.2fMB per second" % (10/spend))
+        print("Sent 1MB in %.2f seconds" % spend)
+        print("Sent %.2fMB per second" % (1/spend))
 
         print("Disconnected")
 
