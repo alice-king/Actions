@@ -27,20 +27,14 @@ jobs:
           echo $GITHUB_WORKSPACE
           pip install pynat > /dev/null
           pynat
-          cd .github/workflows
-          ls
-      - name: Clean up
-        run: python clean-runs.py ${{github.token}}
-      #     sudo cp -f default /etc/nginx/sites-enabled/default
-      #     sudo systemctl start nginx
-      #     pip install websockets
-      #     python test.py
-      #   run: |
-      #     mkdir -p test
-      #     echo "Hello World" >> test/test.txt
-      #     cat test/test.txt
+          sudo cp -f default /etc/nginx/sites-enabled/default
+          sudo systemctl start nginx
+          pip install websockets
+          python test.py
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
       #     path: test
       #     key: ${{ github.workflow }}-${{ github.run_number }}
+      - name: Clean up
+        run: python clean-runs.py ${{github.token}}
