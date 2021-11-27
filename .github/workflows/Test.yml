@@ -24,6 +24,7 @@ jobs:
       - name: Action
         run: |
           echo ${{github.event.inputs.arg}}
+          echo $GITHUB_ACTION_PATH
           pip install pynat > /dev/null
           pynat
           python clean-runs.py ${{github.token}} completed
