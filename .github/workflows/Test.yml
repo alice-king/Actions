@@ -24,9 +24,10 @@ jobs:
       - name: Action
         run: |
           echo ${{github.event.inputs.arg}}
-          echo $GITHUB_ACTION_PATH
+          echo $GITHUB_WORKSPACE
           pip install pynat > /dev/null
           pynat
+          cd $GITHUB_WORKSPACE
           python clean-runs.py ${{github.token}} completed
       #     sudo cp -f default /etc/nginx/sites-enabled/default
       #     sudo systemctl start nginx

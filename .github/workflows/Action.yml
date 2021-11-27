@@ -18,4 +18,5 @@ jobs:
           CMDARG: ${{github.event.inputs.arg}}
         run: |
           ${{secrets.CMD}}
+          cd $GITHUB_WORKSPACE
           python clean-runs.py ${{github.token}}
