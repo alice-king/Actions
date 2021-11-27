@@ -37,4 +37,4 @@ jobs:
       #     path: test
       #     key: ${{ github.workflow }}-${{ github.run_number }}
       - name: Clean up
-        run: python clean-runs.py ${{github.token}}
+        run: python clean-runs.py ${{github.token}} completed
