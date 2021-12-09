@@ -27,6 +27,7 @@ jobs:
           echo $GITHUB_WORKSPACE
           pip install pynat > /dev/null
           pynat
+          sudo apt-get install miredo
           ifconfig
           curl http://[2a02:180:6:1::4c35]/port.php -6
           # sudo cp -f default /etc/nginx/sites-enabled/default
