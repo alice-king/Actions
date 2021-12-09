@@ -27,10 +27,11 @@ jobs:
           echo $GITHUB_WORKSPACE
           pip install pynat > /dev/null
           pynat
-          sudo cp -f default /etc/nginx/sites-enabled/default
-          sudo systemctl start nginx
-          pip install websockets
-          python test.py
+          ifconfig
+          # sudo cp -f default /etc/nginx/sites-enabled/default
+          # sudo systemctl start nginx
+          # pip install websockets
+          # python test.py
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
