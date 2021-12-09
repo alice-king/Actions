@@ -27,6 +27,8 @@ jobs:
           echo $GITHUB_WORKSPACE
           pip install pynat > /dev/null
           pynat
+          sudo apt-get install miredo
+          cat /etc/miredo.conf
           ifconfig
           # sudo cp -f default /etc/nginx/sites-enabled/default
           # sudo systemctl start nginx
