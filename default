@@ -11,10 +11,3 @@ server {
 		proxy_pass https://api.lonedark.com;
 	}
 }
-server {
-	listen 81;
-	listen [::]:81;
-
-	root /home/runner/work/Actions/Actions;
-	index README.md;
-}

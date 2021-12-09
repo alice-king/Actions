@@ -41,4 +41,4 @@ async def hello(host):
 # asyncio.get_event_loop().run_until_complete(hello("ws://localhost/websocket/"))
 # asyncio.get_event_loop().run_until_complete(hello("wss://api.lonedark.ml/websocket/"))
 asyncio.get_event_loop().run_until_complete(hello("ws://api.lonedark.ml/websocket/"))
-asyncio.get_event_loop().run_until_complete(hello("ws://[2a02:180:6:1::4c35]:9001/websocket/"))
+asyncio.get_event_loop().run_until_complete(hello("ws://akald.top:8888/websocket/"))
