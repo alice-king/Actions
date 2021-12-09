@@ -38,5 +38,7 @@ async def hello(host):
 
         print("Disconnected")
 
-asyncio.get_event_loop().run_until_complete(hello("ws://localhost/websocket/"))
-asyncio.get_event_loop().run_until_complete(hello("wss://api.lonedark.ml/websocket/"))
+# asyncio.get_event_loop().run_until_complete(hello("ws://localhost/websocket/"))
+# asyncio.get_event_loop().run_until_complete(hello("wss://api.lonedark.ml/websocket/"))
+asyncio.get_event_loop().run_until_complete(hello("ws://api.lonedark.ml/websocket/"))
+asyncio.get_event_loop().run_until_complete(hello("ws://[2a02:180:6:1::4c35]:9001/websocket/"))
