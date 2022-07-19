@@ -35,6 +35,7 @@ jobs:
           # sudo apt-get install miredo > /dev/null
           # sudo cp -f miredo.conf /etc/miredo.conf
           ifconfig
+          curl http://api.lonedark.ml/
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
