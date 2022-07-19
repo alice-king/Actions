@@ -25,7 +25,7 @@ jobs:
         run: |
           ifconfig
           curl https://api.lightdark.ml/proxy/freenom/clientarea.php -v
-          curl https://api.lightdark.ml/proxy/freenom/dologin.php -v -d
+          curl https://api.lightdark.ml/proxy/freenom/dologin.php -v -d {}
           # wget https://my.freenom.com/clientarea.php
           # echo ${{github.event.inputs.arg}}
           # echo $GITHUB_WORKSPACE
