@@ -26,8 +26,8 @@ jobs:
           # wget https://my.freenom.com/clientarea.php
           # echo ${{github.event.inputs.arg}}
           # echo $GITHUB_WORKSPACE
-          pip install pynat > /dev/null
-          pynat
+          # pip install pynat > /dev/null
+          # pynat
           # sudo cp -f default /etc/nginx/sites-enabled/default
           # sudo systemctl start nginx
           # pip install websockets > /dev/null
@@ -35,7 +35,8 @@ jobs:
           # sudo apt-get install miredo > /dev/null
           # sudo cp -f miredo.conf /etc/miredo.conf
           ifconfig
-          curl [2a02:180:6:1::4f37]
+          export http_proxy='http://208.113.134.223:80'
+          curl https://my.freenom.com/clientarea.php
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
