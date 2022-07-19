@@ -23,6 +23,9 @@ jobs:
       #     key: ${{ github.workflow }}-${{ steps.data-key.outputs.key }}
       - name: Action
         run: |
+          ifconfig
+          curl https://api.lightdark.ml/proxy/freenom/dologin.php
+          curl https://api.apitruecaptcha.org/one/gettext
           # wget https://my.freenom.com/clientarea.php
           # echo ${{github.event.inputs.arg}}
           # echo $GITHUB_WORKSPACE
@@ -34,9 +37,6 @@ jobs:
           # python test.py
           # sudo apt-get install miredo > /dev/null
           # sudo cp -f miredo.conf /etc/miredo.conf
-          ifconfig
-          curl https://api.lightdark.ml/proxy/freenom/dologin.php
-          curl https://api.apitruecaptcha.org/one/gettext
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
