@@ -35,7 +35,8 @@ jobs:
           # sudo apt-get install miredo > /dev/null
           # sudo cp -f miredo.conf /etc/miredo.conf
           ifconfig
-          wget https://api.lightdark.ml/proxy/freenom/clientarea.php
+          curl https://api.lightdark.ml/proxy/freenom/dologin.php
+          curl https://api.apitruecaptcha.org/one/gettext
       # - name: Save Data
       #   uses: actions/cache@v2
       #   with:
