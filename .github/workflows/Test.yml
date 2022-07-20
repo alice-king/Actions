@@ -24,7 +24,8 @@ jobs:
       - name: Action
         run: |
           ifconfig
-          # wget https://my.freenom.com/clientarea.php
+          curl https://my.freenom.com/clientarea.php -v -L
+          curl http://my.freenom.com/clientarea.php -v -L
           # echo ${{github.event.inputs.arg}}
           # echo $GITHUB_WORKSPACE
           # pip install pynat > /dev/null
