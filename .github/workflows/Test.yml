@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # - name: Data Key
       #   id: data-key
       #   run: echo "::set-output name=key::$(($GITHUB_RUN_NUMBER - 1))"
       # - name: Load Data
-      #   uses: actions/cache@v2
+      #   uses: actions/cache@v3
       #   with:
       #     path: test
       #     key: ${{ github.workflow }}-${{ steps.data-key.outputs.key }}
@@ -37,7 +37,7 @@ jobs:
           # sudo apt-get install miredo > /dev/null
           # sudo cp -f miredo.conf /etc/miredo.conf
       # - name: Save Data
-      #   uses: actions/cache@v2
+      #   uses: actions/cache@v3
       #   with:
       #     path: test
       #     key: ${{ github.workflow }}-${{ github.run_number }}
