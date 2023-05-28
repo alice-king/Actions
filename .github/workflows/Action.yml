@@ -1,7 +1,7 @@
 name: Action
 on:
-  schedule:
-    - cron:  '59 23 * * *'
+  # schedule:
+  #   - cron:  '59 23 * * *'
   workflow_dispatch:
     inputs:
       arg:
